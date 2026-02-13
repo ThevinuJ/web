@@ -74,7 +74,7 @@
             color: var(--dark);
         }
 
-        /* --- HEADER --- */
+        /* --- HEADER & LOGO --- */
         header {
             position: fixed;
             width: 100%;
@@ -82,7 +82,7 @@
             z-index: 1000;
             background: rgba(255, 255, 255, 0.98); 
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 15px 0;
+            padding: 10px 0; /* Slightly reduced padding to fit logo nicely */
         }
 
         nav {
@@ -97,6 +97,16 @@
             color: var(--primary);
             letter-spacing: -0.5px;
             text-transform: uppercase;
+            /* Flexbox to align Image and Text */
+            display: flex;
+            align-items: center;
+            gap: 12px; /* Space between logo image and text */
+        }
+
+        .logo-img {
+            height: 45px; /* Adjust logo size */
+            width: auto;
+            object-fit: contain;
         }
 
         .nav-links {
@@ -320,7 +330,6 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            /* CHANGED TO 0.4 FOR LIGHTER TRANSPARENCY */
             background-color: rgba(0,0,0,0.4);
             backdrop-filter: blur(5px);
         }
@@ -539,7 +548,7 @@
             .nav-links {
                 display: none; 
                 position: absolute;
-                top: 60px;
+                top: 60px; /* Adjusted top for slightly larger header if logo is tall */
                 left: 0;
                 width: 100%;
                 background: white;
@@ -549,7 +558,6 @@
             }
             .nav-links.active { display: flex; } 
 
-            /* Fixed Mobile Hero Background */
             .hero {
                 background-attachment: scroll; 
                 height: 100svh; 
@@ -591,7 +599,10 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">THEDEESH TOURS</div>
+                <div class="logo">
+                    <img src="logo.jpeg" alt="Thedeesh Tours Logo" class="logo-img">
+                    THEDEESH TOURS
+                </div>
                 
                 <div class="menu-toggle" onclick="toggleMenu()">
                     <i class="fas fa-bars"></i>
@@ -827,7 +838,7 @@
                     </div>
                 </div>
                 <div class="itinerary-row reverse">
-                    <img src="yala.jpg" alt="Yala" class="itinerary-img">
+                    <img src="yala.png" alt="Yala" class="itinerary-img">
                     <div class="itinerary-text">
                         <span class="day-label">Day 6</span>
                         <h3>Yala & South Coast</h3>
