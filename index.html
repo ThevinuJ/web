@@ -82,7 +82,7 @@
             z-index: 1000;
             background: rgba(255, 255, 255, 0.98); 
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 10px 0; /* Slightly reduced padding to fit logo nicely */
+            padding: 10px 0; 
         }
 
         nav {
@@ -100,13 +100,16 @@
             /* Flexbox to align Image and Text */
             display: flex;
             align-items: center;
-            gap: 12px; /* Space between logo image and text */
+            gap: 12px; 
         }
 
+        /* UPDATED LOGO STYLING FOR ROUND SHAPE */
         .logo-img {
-            height: 45px; /* Adjust logo size */
-            width: auto;
-            object-fit: contain;
+            height: 50px; 
+            width: 50px; /* Forces a perfect square */
+            object-fit: cover; /* Ensures image fills the circle without stretching */
+            border-radius: 50%; /* Makes it a circle */
+            border: 2px solid var(--primary); /* Adds a professional border ring */
         }
 
         .nav-links {
@@ -548,7 +551,7 @@
             .nav-links {
                 display: none; 
                 position: absolute;
-                top: 60px; /* Adjusted top for slightly larger header if logo is tall */
+                top: 60px;
                 left: 0;
                 width: 100%;
                 background: white;
@@ -838,7 +841,7 @@
                     </div>
                 </div>
                 <div class="itinerary-row reverse">
-                    <img src="yala.png" alt="Yala" class="itinerary-img">
+                    <img src="yala.jpg" alt="Yala" class="itinerary-img">
                     <div class="itinerary-text">
                         <span class="day-label">Day 6</span>
                         <h3>Yala & South Coast</h3>
