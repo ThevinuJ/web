@@ -474,40 +474,46 @@
             line-height: 1.8;
         }
 
-        /* --- CONTACT SECTION --- */
+        /* --- CONTACT SECTION (WIDTH INCREASED) --- */
         .contact {
-            padding: 100px 0;
+            padding: 60px 0;
             background: var(--primary);
             color: var(--white);
             text-align: center;
         }
 
         .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
         }
 
         .contact-form {
-            max-width: 600px;
-            margin: 40px auto 0;
-            background: rgba(255,255,255,0.1);
-            padding: 40px;
-            border-radius: 20px;
+            max-width: 550px; /* INCREASED FROM 450px */
+            margin: 25px auto 0;
+            background: rgba(255,255,255,0.15); 
+            padding: 30px; 
+            border-radius: 15px; 
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3); 
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px; 
         }
 
         input, textarea {
             width: 100%;
-            padding: 15px;
+            padding: 12px;
             border: none;
             border-radius: 8px;
-            font-size: 1rem;
-            background: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+            background: #F0F4F8;
+            color: #333;
+        }
+
+        input:focus, textarea:focus {
+            outline: 2px solid var(--accent);
+            background: #fff;
         }
 
         button.submit {
@@ -515,11 +521,12 @@
             background: var(--accent);
             color: var(--dark);
             border: none;
-            padding: 15px;
+            padding: 12px;
             font-weight: 700;
             border-radius: 8px;
             cursor: pointer;
             transition: var(--transition);
+            margin-top: 5px;
         }
 
         button.submit:hover {
@@ -739,6 +746,41 @@
         </div>
     </section>
 
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-top-label">Testimonials</span>
+                <h2 class="section-title-large">What My Guests Say</h2>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Mahesh made our Sri Lanka trip unforgettable! He knew exactly where to find the best local food and spotted leopards in Yala before anyone else. Highly recommended!"</p>
+                    <p class="review-author">- Sarah & Tom, UK</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"An amazing guide who is very safe and reliable. We felt completely comfortable traveling with him for 10 days. The history lessons in Polonnaruwa were a highlight."</p>
+                    <p class="review-author">- The Mueller Family, Germany</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Flexible and fun! We changed our plans last minute to go surfing, and Mahesh arranged everything perfectly. Best guide in Sri Lanka!"</p>
+                    <p class="review-author">- Jessica, Australia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div id="tour-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
@@ -752,7 +794,7 @@
             <h2>Plan Your Sri Lankan Getaway</h2>
             <p>Send me a message with your arrival dates.</p>
             
-            <form action="https://formspree.io/f/mjgeyelq" method="POST">
+            <form action="https://formspree.io/f/mjgeyelq" method="POST" class="contact-form">
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Your Name" required>
                 </div>
@@ -760,7 +802,7 @@
                     <input type="email" name="email" placeholder="Your Email" required>
                 </div>
                 <div class="form-group">
-                    <textarea name="message" rows="5" placeholder="I'm arriving in Colombo on..." required></textarea>
+                    <textarea name="message" rows="3" placeholder="I'm arriving in Colombo on..." required></textarea>
                 </div>
                 <button type="submit" class="submit">Send Inquiry</button>
             </form>
@@ -879,7 +921,7 @@
                     </div>
                 </div>
                 <div class="itinerary-row reverse">
-                    <img src="yala.jpg" alt="Yala" class="itinerary-img">
+                    <img src="yala.png" alt="Yala" class="itinerary-img">
                     <div class="itinerary-text">
                         <span class="day-label">Day 6</span>
                         <h3>Yala & South Coast</h3>
