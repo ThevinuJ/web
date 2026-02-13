@@ -103,13 +103,12 @@
             gap: 12px; 
         }
 
-        /* UPDATED LOGO STYLING FOR ROUND SHAPE */
         .logo-img {
             height: 50px; 
-            width: 50px; /* Forces a perfect square */
-            object-fit: cover; /* Ensures image fills the circle without stretching */
-            border-radius: 50%; /* Makes it a circle */
-            border: 2px solid var(--primary); /* Adds a professional border ring */
+            width: 50px; 
+            object-fit: cover; 
+            border-radius: 50%; 
+            border: 2px solid var(--primary); 
         }
 
         .nav-links {
@@ -321,6 +320,47 @@
         .btn-book-pill:hover {
             background: var(--dark);
             color: var(--white);
+        }
+
+        /* --- REVIEWS SECTION (NEW) --- */
+        .reviews {
+            padding: 100px 0;
+            background-color: var(--card-bg); /* Slight distinctive background */
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .review-stars {
+            color: #FFD700; /* Gold color */
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .review-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .review-author {
+            font-weight: bold;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
         }
 
         /* --- MODAL (POP-UP) STYLES --- */
@@ -572,11 +612,11 @@
             .itinerary-header h2 { font-size: 2rem; }
             .itinerary-text h3 { font-size: 1.8rem; }
 
-            .about, .tours, .contact { padding: 60px 0; }
+            .about, .tours, .reviews, .contact { padding: 60px 0; } /* Added reviews here */
             .about-grid { grid-template-columns: 1fr; gap: 30px; }
             .about-img { margin: 0 auto 30px auto; max-width: 100%; height: 300px; }
             
-            .tours-grid { grid-template-columns: 1fr; }
+            .tours-grid, .reviews-grid { grid-template-columns: 1fr; } /* Added reviews-grid here */
             
             .modal-content { margin: 15% auto; padding: 25px; width: 95%; }
             .itinerary-row, .itinerary-row.reverse { 
@@ -614,7 +654,7 @@
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#about" onclick="toggleMenu()">Guide</a></li>
                     <li><a href="#tours" onclick="toggleMenu()">Packages</a></li>
-                    <li><a href="#reviews" onclick="toggleMenu()">Gallery</a></li>
+                    <li><a href="#reviews" onclick="toggleMenu()">Reviews</a></li>
                     <li><a href="#contact" class="btn btn-primary" onclick="toggleMenu()">Book Now</a></li>
                 </ul>
             </nav>
@@ -694,6 +734,41 @@
                         <p>Focus on wildlife: Wilpattu, Minneriya gathering, Udawalawe and Yala leopards.</p>
                         <button class="btn-book-pill" onclick="openModal('wild')">View Itinerary</button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-top-label">Testimonials</span>
+                <h2 class="section-title-large">What My Guests Say</h2>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Mahesh made our Sri Lanka trip unforgettable! He knew exactly where to find the best local food and spotted leopards in Yala before anyone else. Highly recommended!"</p>
+                    <p class="review-author">- Sarah & Tom, UK</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"An amazing guide who is very safe and reliable. We felt completely comfortable traveling with him for 10 days. The history lessons in Polonnaruwa were a highlight."</p>
+                    <p class="review-author">- The Mueller Family, Germany</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Flexible and fun! We changed our plans last minute to go surfing, and Mahesh arranged everything perfectly. Best guide in Sri Lanka!"</p>
+                    <p class="review-author">- Jessica, Australia</p>
                 </div>
             </div>
         </div>
